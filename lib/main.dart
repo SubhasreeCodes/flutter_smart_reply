@@ -1,18 +1,15 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_smart_reply/screens/ChatScreen.dart';
-import 'package:http/http.dart' as http;
-import 'package:bubble/bubble.dart';
+import 'package:flutter_smart_reply/screens/ChatPage.dart'; // Ensure this file is created and the name matches
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(ChatBotApp());
 
-class MyApp extends StatelessWidget {
+class ChatBotApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ChatScreen(),
+      title: 'ChatBot',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: ChatPage(), // Updated to use ChatPage
     );
   }
 }
